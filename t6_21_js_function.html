@@ -2,7 +2,7 @@
  * @Author: yanxiao333 yanxiao_333@126.com
  * @Date: 2022-06-22 19:09:18
  * @LastEditors: yanxiao333 yanxiao_333@126.com
- * @LastEditTime: 2022-06-22 19:59:02
+ * @LastEditTime: 2022-06-22 20:51:04
  * @FilePath: \t2022_06_html\t6_21_js_function.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    <button>btn1</button>
-    <button>btn2</button>
-    <button>btn3</button>
-    <button>btn4</button>
+    <button class="active">btn1</button>
+    <button class="active">btn2</button>
+    <button class="active">btn3</button>
+    <button class="active">btn4</button>
     <button>btn5</button>
 
     <script>
@@ -37,12 +37,21 @@
         //   }(i)
         //}
         // console.log(i)
-        for (let i = 0; i < btns.length; i++) {
-            btns[i].onclick = function () {
-                target == ('http://longxian.gov.cn/col/col4227/index.html?uid=13861&pageNum=' + (i))
+        //for (let i = 0; i < btns.length; i++) {
+        //     按钮   btns[i].onclick = function () {
+        //      alert('第' + (i + 1) + '按钮')
+        //  }
+        //}
+        //console.log(i)
+        var actives = document.getElementsByClassName('active');
+        console.log(actives);
+        for (var i = 0; i < actives.length; i++) {
+            actives[i].onclick = function () {
+                console.log(this.innerHTML)
             }
         }
-        //console.log(i)
+        //console.log(actives[0].innerHTML)
+        //console.log(actives[0].innerText)
     </script>
 </body>
 
