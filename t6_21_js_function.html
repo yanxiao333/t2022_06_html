@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_DOM基础</title>
+</head>
+
+<body>
+    <button>btn1</button>
+    <button>btn2</button>
+    <button>btn3</buttor>
+        <button>btn4</button>
+        <button>btn5</button>
+
+        <script>
+            var btns = document.getElementsByTagName("button");
+            console.log(btns);
+            //查看btns 找出所有的button添加一个点击事件
+            //当鼠标单击任意按钮时 显示 hello
+            //点击出现第几个按钮
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].onclick = function (i_inner) {
+                    return function () {
+                        alert('第' + (i_inner + 1) + '按钮')
+                    }
+                }(i)
+            }
+            // console.log(i)
+        </script>
+</body>
+
+</html>
