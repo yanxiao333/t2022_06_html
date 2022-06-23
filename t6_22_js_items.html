@@ -6,10 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myFunction_demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 160px;
+            margin: 30px auto;
+        }
+
+        .filePicker {
+            position: relative;
+            width: 160px;
+            height: 44px;
+            line_height: 44px;
+            text-align: "center";
+            color: #ffffff;
+            background: #00b7ee;
+        }
+
+        .filePicker input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 160px;
+            height: 44px;
+            opacity: 0;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div class="container">
+        <input type="file" />
+    </div>
+    <div class="container">
+        <div class="filePicker">
+            <label>点击选择文件</label>
+            <input id="fileInput" type="file" accept="image/*" multiple>
+        </div>
+    </div>
 </body>
 
 </html>
