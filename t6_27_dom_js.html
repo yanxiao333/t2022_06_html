@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给按钮绑定功能</title>
+    <style>
+        ul li {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            float: left;
+            margin-left: 20px;
+
+        }
+
+        .d1 {
+            width: 400px;
+            height: 45px;
+            border: 2px solid #f00;
+            padding: 4px;
+            font: 18px 黑体;
+        }
+
+        .first {
+            color: #999;
+            margin: 13px;
+            padding: 2px;
+        }
+
+        .item {
+            margin: 13px 20px;
+            padding: 2px;
+            transparent: all 0.5s;
+        }
+
+        .active:hover {
+            background-color: red;
+            color: #fff;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="price">
+        <span>&yen;</span>998
+    </div>
+    <div id="btn">降价</div>
+    <script>
+        var div = document.getElementById("price")
+        var btn = document.getElementById("btn");
+        console.log(div.innerHTML);
+        console.log(div.innerText);
+        btn.onclick = function () {
+            //将price的内容降价到$2元
+            //innerHTML和innerText的区别Text只能识别文本
+            div.innerHTML = '<span>&yen;</span>2';
+        } -->
+    <!-- </script> -->
+
+    <body>
+        <ul class="d1">
+            <li class="first">难度:</li>
+            <li class="item">全部</li>
+            <li class="item">初级</li>
+            <li class="item active">中级</li>
+            <li class="item">高级</li>
+            <div class="clear"></div>
+
+        </ul>
+        <script>
+            //为全部 初级中级高级绑定点击事件,点击li弹框hello
+            var btns = document.getElementsByClassName('item');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].onclick = function () {
+                    //alert('hello')
+                    //点击按钮为当前按钮添加active类
+                    this.setAttribute('class', 'item active')
+                    for (var j = 0; j < btn.length; j++) {
+                        if (btns[j] == this) {
+                            continue
+                        }
+                        btns[j].setAttribute('class', 'item');
+                    }
+                }
+            }
+        </script>
+    </body>
+
+</html>
