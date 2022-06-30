@@ -9,11 +9,28 @@
 </head>
 
 <body>
+    <input type="text" id="text">
     <button id="btn" class="btn1">click me</button>
+    <h1 id="show"></h1>
     <script>
+        //查找元素
         // var btn = document.getElementsByTagName("button")[0];
         // console.log(btn);
-
+        var btn = document.getElementsByClassName('btn1')[0];
+        var text = document.getElementById('text');
+        var show = document.getElementById('show');
+        //当btn被点击时
+        //将input的内容 放入h1中显示
+        btn.onclick = function () {
+            //将show的内容变成text的值
+            show.innerHTML = text.value;
+            //清除文本框内容
+            text.value = '';
+        }
+        // btn.onclick = sayHello;
+        // function sayHello() {
+        //     alert("Hello world")
+        // }
     </script>
 </body>
 
