@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>给按钮绑定功能</title>
     <style>
-        ul li {
+        ul,
+        li {
             margin: 0px;
             padding: 0px;
             list-style: none;
-            float: left;
-            margin-left: 20px;
 
         }
 
         .d1 {
             width: 400px;
-            height: 45px;
             border: 2px solid #f00;
-            padding: 4px;
-            font: 18px 黑体;
+        }
+
+        .d1>li {
+            display: inline-block;
         }
 
         .first {
@@ -81,8 +81,8 @@
             var btns = document.getElementsByClassName('item');
             for (var i = 0; i < btns.length; i++) {
                 btns[i].onclick = function () {
-                    //alert('hello')
-                    //点击按钮为当前按钮添加active类
+                    // alert('hello')
+                    点击按钮为当前按钮添加active类
                     this.setAttribute('class', 'item active')
                     //for (var j = 0; j < btns.length; j++) {
                     //if (btns[j] == this.innerHTML) {
