@@ -36,7 +36,7 @@
             transparent: all 0.5s;
         }
 
-        .active:hover {
+        .item.active:hover {
             background-color: red;
             color: #fff;
             cursor: pointer;
@@ -84,14 +84,14 @@
                     //alert('hello')
                     //点击按钮为当前按钮添加active类
                     this.setAttribute('class', 'item active')
-                    for (var j = 0; j < btn.length; j++) {
-                        if (btns[j] == this) {
-                            continue
-                        }
-                        btns[j].setAttribute('class', 'item');
-                    }
+                    //for (var j = 0; j < btns.length; j++) {
+                    //if (btns[j] == this.innerHTML) {
+                    continue
                 }
+                btns[j].setAttribute('class', 'item');
             }
+
+
         </script>
     </body>
 
