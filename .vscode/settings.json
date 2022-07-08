@@ -1,11 +1,11 @@
 // 设置leader键为空格键
 "vim.leader": "<space>",
-"editor.lineNumbers":"relative"
+"editor.lineNumbers": "relative"
 "vim.normalModeKeyBindingsNonRecursive": [
-//更改vim的键位，把h变成光标前输入，ijkl变成上、左、下、右，这样更符合人体习惯
-//我只用了一回就熟练掌握了，而且再也不想回到hjkl表示上下左右的别扭方式了。
-//   i               ↑
-//j  k  l        ←  ↓  →
+    //更改vim的键位，把h变成光标前输入，ijkl变成上、左、下、右，这样更符合人体习惯
+    //我只用了一回就熟练掌握了，而且再也不想回到hjkl表示上下左右的别扭方式了。
+    //   i               ↑
+    //j  k  l        ←  ↓  →
     {
         "before": [
             "h"
@@ -171,8 +171,6 @@
             "workbench.action.closeActiveEditor"
         ],
     },
-
-
     // 按下leader键+k，向上搜索行（easymotion）
     {
         "before": [
@@ -305,7 +303,6 @@
         ]
     },
 ],
-
 {
     "vim.easymotion": true,
     "vim.incsearch": true,
@@ -313,24 +310,44 @@
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      }
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
-      },
-      {
-        "before": ["<C-n>"],
-        "commands": [":nohl"]
-      }
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
     ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
-      "<C-a>": false,
-      "<C-f>": false
+        "<C-a>": false,
+        "<C-f>": false
     }
-  }
+
+   "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "files.associations": {
+        "*.html": "html"
+    },
+}
