@@ -1,0 +1,13 @@
+.md-blue-bg .md20180330011ty {
+    background: #4f8dfe;
+    box-shadow: 0px 0px 20px 10px rgba(79, 141, 254/20%);
+}
+
+.md20180330011ty {
+    width: 1583px;
+    height: 70px;
+    position: relative;
+    z-index: 100;
+    min-width: 1200px;
+
+}
